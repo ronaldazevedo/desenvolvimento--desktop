@@ -23,6 +23,8 @@ namespace MultApps.Windows
             chkAdulto.ForeColor = Color.Gray;
             chkAdulto.Checked = false;
             lblIdade.Text = "Abaixo de 19 anos";
+            cmbIdade.Visible = true;
+            LblIdades.Visible = true;
         }
 
         private void chkAdulto_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +33,63 @@ namespace MultApps.Windows
             chkCrianca.ForeColor = Color.Gray;
             chkCrianca.Checked = false;
             lblIdade.Text = "Acima de 19 anos";
+            cmbIdade.Visible = false;
+            LblIdades.Visible = false;
+
+        }
+
+        private void chkMasculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chkMasculino.ForeColor = Color.DarkOrange;
+            chkFeminino.ForeColor = Color.Gray;
+            chkFeminino.Checked = false;
+           
+        }
+
+        private void chkFeminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chkFeminino.ForeColor = Color.DarkOrange;
+            chkMasculino.ForeColor = Color.Gray;
+            chkMasculino.Checked = false;
+            
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            //PRIMEIRO PASSO OBTER OS VALORES
+            var peso = double.Parse(txtPeso.Text);
+            var altura = double.Parse(txtAltura.Text);
+
+            // FAZ O PROCESSAMENTO
+            var imc = peso / (altura * altura);
+            var textoBase = $@"Meu IMC: {imc:N2} é";
+            //exibe o resultado
+
+            
+            if (imc <= 18.5)
+            {
+                lblResultadoImc.Text = $@"{textoBase} é abaixo do normal";
+            }
+            else if (imc < 24.9) 
+            {
+                lblResultadoImc.Text = $@"{textoBase} é normal";
+            }
+            else if (imc < 29.9)
+            {
+                lblResultadoImc.Text = $@"{textoBase} é sobrepeso";
+            }
+            else if (imc < 34.9)
+            {
+                lblResultadoImc.Text = $@"{textoBase} é obesidade grau 1";
+            }
+            else if (imc < 39.9)
+            {
+                lblResultadoImc.Text = $@"{textoBase} é obesidade grau 2";
+            }
+            else 
+            {
+                lblResultadoImc.Text = $@"{textoBase} é obesidade grau 3";
+            }
         }
     }
 }
