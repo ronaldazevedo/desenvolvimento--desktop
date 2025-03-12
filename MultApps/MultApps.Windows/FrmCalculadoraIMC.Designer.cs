@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblResultadoImc = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.panelAdulto = new System.Windows.Forms.Panel();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.cmbIdade = new System.Windows.Forms.ComboBox();
@@ -43,15 +45,16 @@
             this.chkCrianca = new System.Windows.Forms.CheckBox();
             this.chkAdulto = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblResultadoImc = new System.Windows.Forms.Label();
+            this.picBoxImc = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelAdulto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.picBoxImc);
             this.panel1.Controls.Add(this.lblResultadoImc);
             this.panel1.Controls.Add(this.btnCalcular);
             this.panel1.Controls.Add(this.panelAdulto);
@@ -67,6 +70,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1549, 759);
             this.panel1.TabIndex = 0;
+            // 
+            // lblResultadoImc
+            // 
+            this.lblResultadoImc.AutoSize = true;
+            this.lblResultadoImc.Location = new System.Drawing.Point(403, 455);
+            this.lblResultadoImc.Name = "lblResultadoImc";
+            this.lblResultadoImc.Size = new System.Drawing.Size(94, 24);
+            this.lblResultadoImc.TabIndex = 9;
+            this.lblResultadoImc.Text = "Resultado";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
+            this.btnCalcular.Location = new System.Drawing.Point(78, 450);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(134, 34);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // panelAdulto
             // 
@@ -238,26 +262,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione";
             // 
-            // btnCalcular
+            // picBoxImc
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
-            this.btnCalcular.Location = new System.Drawing.Point(78, 450);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(134, 34);
-            this.btnCalcular.TabIndex = 8;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // lblResultadoImc
-            // 
-            this.lblResultadoImc.AutoSize = true;
-            this.lblResultadoImc.Location = new System.Drawing.Point(403, 455);
-            this.lblResultadoImc.Name = "lblResultadoImc";
-            this.lblResultadoImc.Size = new System.Drawing.Size(94, 24);
-            this.lblResultadoImc.TabIndex = 9;
-            this.lblResultadoImc.Text = "Resultado";
+            this.picBoxImc.Location = new System.Drawing.Point(794, 182);
+            this.picBoxImc.Name = "picBoxImc";
+            this.picBoxImc.Size = new System.Drawing.Size(210, 317);
+            this.picBoxImc.TabIndex = 10;
+            this.picBoxImc.TabStop = false;
             // 
             // FrmCalculadoraIMC
             // 
@@ -274,6 +285,7 @@
             this.panel1.PerformLayout();
             this.panelAdulto.ResumeLayout(false);
             this.panelAdulto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +309,6 @@
         private System.Windows.Forms.ComboBox cmbIdade;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblResultadoImc;
+        private System.Windows.Forms.PictureBox picBoxImc;
     }
 }
