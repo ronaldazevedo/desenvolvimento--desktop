@@ -43,7 +43,7 @@ namespace MultApps.Windows
             chkMasculino.ForeColor = Color.DarkOrange;
             chkFeminino.ForeColor = Color.Gray;
             chkFeminino.Checked = false;
-           
+
         }
 
         private void chkFeminino_CheckedChanged(object sender, EventArgs e)
@@ -51,85 +51,126 @@ namespace MultApps.Windows
             chkFeminino.ForeColor = Color.DarkOrange;
             chkMasculino.ForeColor = Color.Gray;
             chkMasculino.Checked = false;
-            
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+
+            //PRIMEIRO PASSO OBTER OS VALORES
+            var peso = double.Parse(txtPeso.Text);
+            var altura = double.Parse(txtAltura.Text);
+
+            // FAZ O PROCESSAMENTO
+            var imc = peso / (altura * altura);
+            var textoBase = $@"Meu IMC: {imc:N2} é";
+            //exibe o resultado
             if (chkAdulto.Checked && chkMasculino.Checked)
             {
                 #region Adulto Masculino
 
 
 
-
-                //PRIMEIRO PASSO OBTER OS VALORES
-                var peso = double.Parse(txtPeso.Text);
-                var altura = double.Parse(txtAltura.Text);
-
-                // FAZ O PROCESSAMENTO
-                var imc = peso / (altura * altura);
-                var textoBase = $@"Meu IMC: {imc:N2} é";
-                //exibe o resultado
-
-               
-                
                 if (imc <= 18.5)
                 {
                     lblResultadoImc.Text = $@"{textoBase} abaixo do normal";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_06.png ");
+                    picBoxImc.Load(ImcImagem.MasculinoAbaixoDoPesoNormal);
                 }
                 else if (imc < 24.9)
                 {
                     lblResultadoImc.Text = $@"{textoBase} normal";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_05.png ");
+                    picBoxImc.Load(ImcImagem.MasculinoPesoNormal);
                 }
                 else if (imc < 29.9)
                 {
                     lblResultadoImc.Text = $@"{textoBase} sobrepeso";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_04.png ");
+                    picBoxImc.Load(ImcImagem.MasculinoSobrepeso);
                 }
                 else if (imc < 34.9)
                 {
                     lblResultadoImc.Text = $@"{textoBase}  obesidade grau 1";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_03.png");
+                    picBoxImc.Load(ImcImagem.MasculinoObesidadeGrau1);
                 }
                 else if (imc < 39.9)
                 {
                     lblResultadoImc.Text = $@"{textoBase} obesidade grau 2";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png ");
+                    picBoxImc.Load(ImcImagem.MasculinoObesidadeGrau2);
                 }
                 else
                 {
                     lblResultadoImc.Text = $@"{textoBase} obesidade grau 3";
-                    picBoxImc.Load("https://abeso.org.br/wp-content/uploads/2019/12/imc_01.png ");
+                    picBoxImc.Load(ImcImagem.MasculinoObesidadeGrau3);
                 }
+                #endregion
 
+
+            }
+
+            if (chkAdulto.Checked && chkFeminino.Checked)
+            {
+                #region Adulto Femenino
+
+                if (imc <= 18.5)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} abaixo do normal";
+                    picBoxImc.Load(ImcImagem.FemininoAbaixoDoPesoNormal);
+                }
+                else if (imc < 24.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} normal";
+                    picBoxImc.Load(ImcImagem.FemininoPesoNormal);
+                }
+                else if (imc < 29.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} sobrepeso";
+                    picBoxImc.Load(ImcImagem.FemininoSobrepeso);
+                }
+                else if (imc < 34.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase}  obesidade grau 1";
+                    picBoxImc.Load(ImcImagem.FemininoObesidadeGrau1);
+                }
+                else if (imc < 39.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 2";
+                    picBoxImc.Load(ImcImagem.FemininoObesidadeGrau2);
+                }
+                else
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 3";
+                    picBoxImc.Load(ImcImagem.FemininoObesidadeGrau3);
+
+
+                }
                 #endregion
             }
 
-        }
-
-        private string ManipuladorDeImagem(string grau)
-        {
-            switch (grau)
+            if (chkCrianca.Checked)
             {
+                #region Crianca
 
-                case "abaixo do normal":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_06.png";
-                case "normal":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_05.png";
-                case "sobrepeso":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_04.png";
-                case "obesidade gra 1":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_03.png";
-                case "obesidade gra 2":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png";
-                case "obesidade grau 3":
-                    return "https://abeso.org.br/wp-content/uploads/2019/12/imc_01.png";
+                if (imc >= 2)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade";
+                    picBoxImc.Load(ImcImagem.CriancaObesidade);
+                }
+                else if (imc < 2 && imc >= 1)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} sobrepeso";
+                    picBoxImc.Load(ImcImagem.CriancaSobrepeso);
+                }
+                else if (imc < 1 && imc >= -2)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} peso normal";
+                    picBoxImc.Load(ImcImagem.CriancaPesoNormal);
+                }
+                else
+                {
+                    lblResultadoImc.Text = $@"{textoBase} abaixo do normal";
+                    picBoxImc.Load(ImcImagem.CriancaAbaixoDoPesoNormal);
+                }
+                #endregion
 
-                default: 
-                    var""
             }
         }
     }

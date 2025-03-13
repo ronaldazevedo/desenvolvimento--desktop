@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picBoxImc = new System.Windows.Forms.PictureBox();
             this.lblResultadoImc = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.panelAdulto = new System.Windows.Forms.Panel();
@@ -45,10 +46,9 @@
             this.chkCrianca = new System.Windows.Forms.CheckBox();
             this.chkAdulto = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picBoxImc = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panelAdulto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImc)).BeginInit();
+            this.panelAdulto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1549, 759);
             this.panel1.TabIndex = 0;
+            // 
+            // picBoxImc
+            // 
+            this.picBoxImc.Location = new System.Drawing.Point(710, 158);
+            this.picBoxImc.Name = "picBoxImc";
+            this.picBoxImc.Size = new System.Drawing.Size(250, 378);
+            this.picBoxImc.TabIndex = 10;
+            this.picBoxImc.TabStop = false;
             // 
             // lblResultadoImc
             // 
@@ -262,14 +270,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione";
             // 
-            // picBoxImc
-            // 
-            this.picBoxImc.Location = new System.Drawing.Point(794, 182);
-            this.picBoxImc.Name = "picBoxImc";
-            this.picBoxImc.Size = new System.Drawing.Size(210, 317);
-            this.picBoxImc.TabIndex = 10;
-            this.picBoxImc.TabStop = false;
-            // 
             // FrmCalculadoraIMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -283,9 +283,9 @@
             this.Text = "FrmCalculadoraIMC";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImc)).EndInit();
             this.panelAdulto.ResumeLayout(false);
             this.panelAdulto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxImc)).EndInit();
             this.ResumeLayout(false);
 
         }
