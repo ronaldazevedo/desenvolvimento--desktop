@@ -24,5 +24,11 @@ namespace MultApps.Windows
             form.Show();
 
         }
+
+        private void Principal_Shown(object sender, EventArgs e)
+        {
+            var loading = new FrmSplashScreen();
+            loading.ShowDialog();
+        }
     }
 }
