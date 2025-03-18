@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAppDeCarteirinha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppDeCarteirinha.Designer.cs">
+      <DependentUpon>frmAppDeCarteirinha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCalculadoraIMC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAppDeCarteirinha.resx">
+      <DependentUpon>frmAppDeCarteirinha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCalculadoraIMC.resx">
       <DependentUpon>FrmCalculadoraIMC.cs</DependentUpon>
     </EmbeddedResource>
