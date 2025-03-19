@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace MultApps.Windows
 {
-    enum ClassificacaoImc
+    enum ClassificacaoDeImc
     {
         AbaixoNormal,
         Normal,
-        SobrePeso,
+        Sobrepeso,
         ObesidadeGrau1,
         ObesidadeGrau2,
         ObesidadeGrau3,
+
     }
 }

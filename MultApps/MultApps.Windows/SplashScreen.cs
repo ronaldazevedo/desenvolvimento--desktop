@@ -12,15 +12,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MultApps.Windows
 {
-    public partial class FrmSplashScreen : Form
+    public partial class SplashScreen : Form
     {
-        public FrmSplashScreen()
+        public SplashScreen()
         {
             InitializeComponent();
         }
 
-
-        private void FrmSplashScreen_Shown(object sender, EventArgs e)
+        private void SplashScreen_Shown(object sender, EventArgs e)
         {
             this.Refresh();
             for (int i = 0; i < 101; i++)
@@ -34,5 +33,4 @@ namespace MultApps.Windows
             this.Close();
         }
     }
-    
 }

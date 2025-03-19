@@ -17,18 +17,31 @@ namespace MultApps.Windows
             InitializeComponent();
         }
 
-        private void menuCalculadorImc_Click(object sender, EventArgs e)
+        private void MenuCalculadoraImc_Click(object sender, EventArgs e)
         {
             var form = new FrmCalculadoraIMC();
             form.MdiParent = this;
             form.Show();
-
         }
 
         private void Principal_Shown(object sender, EventArgs e)
         {
-            var loading = new FrmSplashScreen();
+            var loading = new SplashScreen();
             loading.ShowDialog();
+        }
+
+        private void calculadoraDeAposentadoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new CalculadoraAposentadoria();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void geradorDeCarteirinhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new Carteirinha();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
