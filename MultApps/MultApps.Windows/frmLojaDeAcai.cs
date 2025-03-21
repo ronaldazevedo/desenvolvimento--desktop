@@ -35,7 +35,7 @@ namespace MultApps.Windows
 
         private void btnFamilia_Click(object sender, EventArgs e)
         {
-            lbxTamanho.Items.Add("Açai familia  (1L) - R$ 35,00");
+            lbxTamanho.Items.Add("Açai familia (1L) - R$ 35,00");
 
         }
 
