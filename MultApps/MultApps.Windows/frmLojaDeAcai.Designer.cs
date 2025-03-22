@@ -57,62 +57,65 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.QntLeiteCondensado = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.QntLeiteEmPo = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.QntPaçoca = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.QntOvomaltine = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.QntGranulado = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.QntAbacaxi = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.QntManga = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.QntKiwi = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.QntUva = new System.Windows.Forms.NumericUpDown();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.QntMorango = new System.Windows.Forms.NumericUpDown();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.QntBanana = new System.Windows.Forms.NumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.panel18 = new System.Windows.Forms.Panel();
+            this.panelPedidoItem = new System.Windows.Forms.Panel();
+            this.lbxTotal = new System.Windows.Forms.ListBox();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.lbxCoberturas = new System.Windows.Forms.ListBox();
             this.lbxTamanho = new System.Windows.Forms.ListBox();
             this.lbxFrutas = new System.Windows.Forms.ListBox();
             this.lbxComplementos = new System.Windows.Forms.ListBox();
@@ -125,6 +128,37 @@
             this.bntGerarSenha = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.QntGroseliaComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.QntLimãoComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.QntMorangoComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.QntChocolateComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.QntUvaComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.QntCarameloComplemento = new System.Windows.Forms.NumericUpDown();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -138,40 +172,58 @@
             ((System.ComponentModel.ISupportInitialize)(this.QntGronola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLeiteCondensado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLeiteEmPo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntPaçoca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntOvomaltine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntGranulado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntAbacaxi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntManga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntKiwi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntUva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntMorango)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntBanana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            this.panel18.SuspendLayout();
+            this.panelPedidoItem.SuspendLayout();
             this.panel19.SuspendLayout();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntGroseliaComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLimãoComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntMorangoComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntChocolateComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntUvaComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntCarameloComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -233,7 +285,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1082, 21);
+            this.panel2.Size = new System.Drawing.Size(1217, 21);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -428,14 +480,10 @@
             // QntGronola
             // 
             this.QntGronola.Location = new System.Drawing.Point(35, 93);
-            this.QntGronola.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.QntGronola.Name = "QntGronola";
             this.QntGronola.Size = new System.Drawing.Size(31, 20);
             this.QntGronola.TabIndex = 3;
+            this.QntGronola.ValueChanged += new System.EventHandler(this.QntGronola_ValueChanged);
             // 
             // label10
             // 
@@ -470,7 +518,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel7.Controls.Add(this.numericUpDown2);
+            this.panel7.Controls.Add(this.QntLeiteCondensado);
             this.panel7.Controls.Add(this.label12);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.pictureBox6);
@@ -479,12 +527,13 @@
             this.panel7.Size = new System.Drawing.Size(121, 118);
             this.panel7.TabIndex = 5;
             // 
-            // numericUpDown2
+            // QntLeiteCondensado
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.QntLeiteCondensado.Location = new System.Drawing.Point(35, 93);
+            this.QntLeiteCondensado.Name = "QntLeiteCondensado";
+            this.QntLeiteCondensado.Size = new System.Drawing.Size(31, 20);
+            this.QntLeiteCondensado.TabIndex = 3;
+            this.QntLeiteCondensado.ValueChanged += new System.EventHandler(this.QntLeiteCondensado_ValueChanged_1);
             // 
             // label12
             // 
@@ -519,7 +568,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel8.Controls.Add(this.numericUpDown3);
+            this.panel8.Controls.Add(this.QntLeiteEmPo);
             this.panel8.Controls.Add(this.label14);
             this.panel8.Controls.Add(this.label15);
             this.panel8.Controls.Add(this.pictureBox7);
@@ -528,12 +577,13 @@
             this.panel8.Size = new System.Drawing.Size(121, 118);
             this.panel8.TabIndex = 5;
             // 
-            // numericUpDown3
+            // QntLeiteEmPo
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown3.TabIndex = 3;
+            this.QntLeiteEmPo.Location = new System.Drawing.Point(35, 93);
+            this.QntLeiteEmPo.Name = "QntLeiteEmPo";
+            this.QntLeiteEmPo.Size = new System.Drawing.Size(31, 20);
+            this.QntLeiteEmPo.TabIndex = 3;
+            this.QntLeiteEmPo.ValueChanged += new System.EventHandler(this.QntLeiteEmPo_ValueChanged);
             // 
             // label14
             // 
@@ -568,7 +618,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel9.Controls.Add(this.numericUpDown4);
+            this.panel9.Controls.Add(this.QntPaçoca);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.pictureBox8);
@@ -577,12 +627,13 @@
             this.panel9.Size = new System.Drawing.Size(121, 118);
             this.panel9.TabIndex = 6;
             // 
-            // numericUpDown4
+            // QntPaçoca
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown4.TabIndex = 3;
+            this.QntPaçoca.Location = new System.Drawing.Point(35, 93);
+            this.QntPaçoca.Name = "QntPaçoca";
+            this.QntPaçoca.Size = new System.Drawing.Size(31, 20);
+            this.QntPaçoca.TabIndex = 3;
+            this.QntPaçoca.ValueChanged += new System.EventHandler(this.QntPaçoca_ValueChanged);
             // 
             // label16
             // 
@@ -617,7 +668,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel10.Controls.Add(this.numericUpDown5);
+            this.panel10.Controls.Add(this.QntOvomaltine);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Controls.Add(this.label19);
             this.panel10.Controls.Add(this.pictureBox9);
@@ -626,12 +677,13 @@
             this.panel10.Size = new System.Drawing.Size(121, 118);
             this.panel10.TabIndex = 6;
             // 
-            // numericUpDown5
+            // QntOvomaltine
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown5.TabIndex = 3;
+            this.QntOvomaltine.Location = new System.Drawing.Point(35, 93);
+            this.QntOvomaltine.Name = "QntOvomaltine";
+            this.QntOvomaltine.Size = new System.Drawing.Size(31, 20);
+            this.QntOvomaltine.TabIndex = 3;
+            this.QntOvomaltine.ValueChanged += new System.EventHandler(this.QntOvomaltine_ValueChanged);
             // 
             // label18
             // 
@@ -666,7 +718,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel11.Controls.Add(this.numericUpDown6);
+            this.panel11.Controls.Add(this.QntGranulado);
             this.panel11.Controls.Add(this.label20);
             this.panel11.Controls.Add(this.label21);
             this.panel11.Controls.Add(this.pictureBox10);
@@ -675,12 +727,13 @@
             this.panel11.Size = new System.Drawing.Size(121, 118);
             this.panel11.TabIndex = 6;
             // 
-            // numericUpDown6
+            // QntGranulado
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown6.TabIndex = 3;
+            this.QntGranulado.Location = new System.Drawing.Point(35, 93);
+            this.QntGranulado.Name = "QntGranulado";
+            this.QntGranulado.Size = new System.Drawing.Size(31, 20);
+            this.QntGranulado.TabIndex = 3;
+            this.QntGranulado.ValueChanged += new System.EventHandler(this.QntGranulado_ValueChanged);
             // 
             // label20
             // 
@@ -725,7 +778,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel12.Controls.Add(this.numericUpDown7);
+            this.panel12.Controls.Add(this.QntAbacaxi);
             this.panel12.Controls.Add(this.label22);
             this.panel12.Controls.Add(this.label23);
             this.panel12.Controls.Add(this.pictureBox11);
@@ -734,12 +787,13 @@
             this.panel12.Size = new System.Drawing.Size(121, 118);
             this.panel12.TabIndex = 6;
             // 
-            // numericUpDown7
+            // QntAbacaxi
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown7.TabIndex = 3;
+            this.QntAbacaxi.Location = new System.Drawing.Point(35, 93);
+            this.QntAbacaxi.Name = "QntAbacaxi";
+            this.QntAbacaxi.Size = new System.Drawing.Size(31, 20);
+            this.QntAbacaxi.TabIndex = 3;
+            this.QntAbacaxi.ValueChanged += new System.EventHandler(this.QntAbacaxi_ValueChanged);
             // 
             // label22
             // 
@@ -774,7 +828,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel13.Controls.Add(this.numericUpDown8);
+            this.panel13.Controls.Add(this.QntManga);
             this.panel13.Controls.Add(this.label24);
             this.panel13.Controls.Add(this.label25);
             this.panel13.Controls.Add(this.pictureBox12);
@@ -783,12 +837,13 @@
             this.panel13.Size = new System.Drawing.Size(121, 118);
             this.panel13.TabIndex = 9;
             // 
-            // numericUpDown8
+            // QntManga
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown8.TabIndex = 3;
+            this.QntManga.Location = new System.Drawing.Point(35, 93);
+            this.QntManga.Name = "QntManga";
+            this.QntManga.Size = new System.Drawing.Size(31, 20);
+            this.QntManga.TabIndex = 3;
+            this.QntManga.ValueChanged += new System.EventHandler(this.QntManga_ValueChanged);
             // 
             // label24
             // 
@@ -823,7 +878,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel14.Controls.Add(this.numericUpDown9);
+            this.panel14.Controls.Add(this.QntKiwi);
             this.panel14.Controls.Add(this.label26);
             this.panel14.Controls.Add(this.label27);
             this.panel14.Controls.Add(this.pictureBox13);
@@ -832,12 +887,13 @@
             this.panel14.Size = new System.Drawing.Size(121, 118);
             this.panel14.TabIndex = 6;
             // 
-            // numericUpDown9
+            // QntKiwi
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown9.TabIndex = 3;
+            this.QntKiwi.Location = new System.Drawing.Point(35, 93);
+            this.QntKiwi.Name = "QntKiwi";
+            this.QntKiwi.Size = new System.Drawing.Size(31, 20);
+            this.QntKiwi.TabIndex = 3;
+            this.QntKiwi.ValueChanged += new System.EventHandler(this.QntKiwi_ValueChanged);
             // 
             // label26
             // 
@@ -872,7 +928,7 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel15.Controls.Add(this.numericUpDown10);
+            this.panel15.Controls.Add(this.QntUva);
             this.panel15.Controls.Add(this.label28);
             this.panel15.Controls.Add(this.label29);
             this.panel15.Controls.Add(this.pictureBox14);
@@ -881,12 +937,13 @@
             this.panel15.Size = new System.Drawing.Size(121, 118);
             this.panel15.TabIndex = 6;
             // 
-            // numericUpDown10
+            // QntUva
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown10.TabIndex = 3;
+            this.QntUva.Location = new System.Drawing.Point(35, 93);
+            this.QntUva.Name = "QntUva";
+            this.QntUva.Size = new System.Drawing.Size(31, 20);
+            this.QntUva.TabIndex = 3;
+            this.QntUva.ValueChanged += new System.EventHandler(this.QntUva_ValueChanged);
             // 
             // label28
             // 
@@ -921,7 +978,7 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel16.Controls.Add(this.numericUpDown11);
+            this.panel16.Controls.Add(this.QntMorango);
             this.panel16.Controls.Add(this.label30);
             this.panel16.Controls.Add(this.label31);
             this.panel16.Controls.Add(this.pictureBox15);
@@ -930,12 +987,13 @@
             this.panel16.Size = new System.Drawing.Size(121, 118);
             this.panel16.TabIndex = 6;
             // 
-            // numericUpDown11
+            // QntMorango
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown11.TabIndex = 3;
+            this.QntMorango.Location = new System.Drawing.Point(35, 93);
+            this.QntMorango.Name = "QntMorango";
+            this.QntMorango.Size = new System.Drawing.Size(31, 20);
+            this.QntMorango.TabIndex = 3;
+            this.QntMorango.ValueChanged += new System.EventHandler(this.QntMorango_ValueChanged);
             // 
             // label30
             // 
@@ -970,7 +1028,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel17.Controls.Add(this.numericUpDown12);
+            this.panel17.Controls.Add(this.QntBanana);
             this.panel17.Controls.Add(this.label32);
             this.panel17.Controls.Add(this.label33);
             this.panel17.Controls.Add(this.pictureBox16);
@@ -979,12 +1037,13 @@
             this.panel17.Size = new System.Drawing.Size(121, 118);
             this.panel17.TabIndex = 6;
             // 
-            // numericUpDown12
+            // QntBanana
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(35, 93);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(31, 20);
-            this.numericUpDown12.TabIndex = 3;
+            this.QntBanana.Location = new System.Drawing.Point(35, 93);
+            this.QntBanana.Name = "QntBanana";
+            this.QntBanana.Size = new System.Drawing.Size(31, 20);
+            this.QntBanana.TabIndex = 3;
+            this.QntBanana.ValueChanged += new System.EventHandler(this.QntBanana_ValueChanged);
             // 
             // label32
             // 
@@ -1016,25 +1075,55 @@
             this.pictureBox16.TabIndex = 0;
             this.pictureBox16.TabStop = false;
             // 
-            // panel18
+            // panelPedidoItem
             // 
-            this.panel18.BackColor = System.Drawing.Color.LavenderBlush;
-            this.panel18.Controls.Add(this.lbxTamanho);
-            this.panel18.Controls.Add(this.lbxFrutas);
-            this.panel18.Controls.Add(this.lbxComplementos);
-            this.panel18.Controls.Add(this.btnConfirmar);
-            this.panel18.Controls.Add(this.lblTotal);
-            this.panel18.Controls.Add(this.textBox4);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel18.Location = new System.Drawing.Point(882, 21);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(200, 571);
-            this.panel18.TabIndex = 10;
+            this.panelPedidoItem.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panelPedidoItem.Controls.Add(this.lbxTotal);
+            this.panelPedidoItem.Controls.Add(this.btnRemover);
+            this.panelPedidoItem.Controls.Add(this.lbxCoberturas);
+            this.panelPedidoItem.Controls.Add(this.lbxTamanho);
+            this.panelPedidoItem.Controls.Add(this.lbxFrutas);
+            this.panelPedidoItem.Controls.Add(this.lbxComplementos);
+            this.panelPedidoItem.Controls.Add(this.btnConfirmar);
+            this.panelPedidoItem.Controls.Add(this.lblTotal);
+            this.panelPedidoItem.Controls.Add(this.textBox4);
+            this.panelPedidoItem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelPedidoItem.Location = new System.Drawing.Point(1017, 21);
+            this.panelPedidoItem.Name = "panelPedidoItem";
+            this.panelPedidoItem.Size = new System.Drawing.Size(200, 663);
+            this.panelPedidoItem.TabIndex = 10;
+            // 
+            // lbxTotal
+            // 
+            this.lbxTotal.FormattingEnabled = true;
+            this.lbxTotal.Location = new System.Drawing.Point(6, 478);
+            this.lbxTotal.Name = "lbxTotal";
+            this.lbxTotal.Size = new System.Drawing.Size(185, 108);
+            this.lbxTotal.TabIndex = 21;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Location = new System.Drawing.Point(46, 631);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(91, 20);
+            this.btnRemover.TabIndex = 20;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // lbxCoberturas
+            // 
+            this.lbxCoberturas.FormattingEnabled = true;
+            this.lbxCoberturas.Location = new System.Drawing.Point(6, 370);
+            this.lbxCoberturas.Name = "lbxCoberturas";
+            this.lbxCoberturas.Size = new System.Drawing.Size(185, 82);
+            this.lbxCoberturas.TabIndex = 19;
             // 
             // lbxTamanho
             // 
             this.lbxTamanho.FormattingEnabled = true;
-            this.lbxTamanho.Location = new System.Drawing.Point(6, 58);
+            this.lbxTamanho.Location = new System.Drawing.Point(6, 30);
             this.lbxTamanho.Name = "lbxTamanho";
             this.lbxTamanho.Size = new System.Drawing.Size(182, 108);
             this.lbxTamanho.TabIndex = 18;
@@ -1042,7 +1131,7 @@
             // lbxFrutas
             // 
             this.lbxFrutas.FormattingEnabled = true;
-            this.lbxFrutas.Location = new System.Drawing.Point(3, 358);
+            this.lbxFrutas.Location = new System.Drawing.Point(6, 256);
             this.lbxFrutas.Name = "lbxFrutas";
             this.lbxFrutas.Size = new System.Drawing.Size(185, 108);
             this.lbxFrutas.TabIndex = 17;
@@ -1050,7 +1139,7 @@
             // lbxComplementos
             // 
             this.lbxComplementos.FormattingEnabled = true;
-            this.lbxComplementos.Location = new System.Drawing.Point(6, 205);
+            this.lbxComplementos.Location = new System.Drawing.Point(6, 141);
             this.lbxComplementos.Name = "lbxComplementos";
             this.lbxComplementos.Size = new System.Drawing.Size(182, 108);
             this.lbxComplementos.TabIndex = 16;
@@ -1058,7 +1147,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(25, 536);
+            this.btnConfirmar.Location = new System.Drawing.Point(20, 592);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(149, 23);
             this.btnConfirmar.TabIndex = 15;
@@ -1069,7 +1158,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(3, 469);
+            this.lblTotal.Location = new System.Drawing.Point(3, 462);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(36, 13);
             this.lblTotal.TabIndex = 13;
@@ -1140,17 +1229,334 @@
             this.textBox1.TabIndex = 14;
             this.textBox1.Text = "ESCOLHA O TAMANHO";
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel20.Controls.Add(this.QntGroseliaComplemento);
+            this.panel20.Controls.Add(this.label36);
+            this.panel20.Controls.Add(this.label37);
+            this.panel20.Controls.Add(this.pictureBox17);
+            this.panel20.Location = new System.Drawing.Point(701, 69);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(121, 118);
+            this.panel20.TabIndex = 10;
+            // 
+            // QntGroseliaComplemento
+            // 
+            this.QntGroseliaComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntGroseliaComplemento.Name = "QntGroseliaComplemento";
+            this.QntGroseliaComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntGroseliaComplemento.TabIndex = 0;
+            this.QntGroseliaComplemento.ValueChanged += new System.EventHandler(this.QntGroseliaComplemento_ValueChanged_1);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(1, 56);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(47, 12);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "Groselia";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(3, 77);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(45, 13);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "R$ 2,00";
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191204;
+            this.pictureBox17.InitialImage = null;
+            this.pictureBox17.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 0;
+            this.pictureBox17.TabStop = false;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel21.Controls.Add(this.QntLimãoComplemento);
+            this.panel21.Controls.Add(this.label38);
+            this.panel21.Controls.Add(this.label39);
+            this.panel21.Controls.Add(this.pictureBox18);
+            this.panel21.Location = new System.Drawing.Point(701, 193);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(121, 118);
+            this.panel21.TabIndex = 10;
+            // 
+            // QntLimãoComplemento
+            // 
+            this.QntLimãoComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntLimãoComplemento.Name = "QntLimãoComplemento";
+            this.QntLimãoComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntLimãoComplemento.TabIndex = 3;
+            this.QntLimãoComplemento.ValueChanged += new System.EventHandler(this.QntLimãoComplemento_ValueChanged);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(1, 56);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(32, 12);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "limão";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(3, 77);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(45, 13);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "R$ 2,00";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191255;
+            this.pictureBox18.InitialImage = null;
+            this.pictureBox18.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 0;
+            this.pictureBox18.TabStop = false;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel22.Controls.Add(this.QntMorangoComplemento);
+            this.panel22.Controls.Add(this.label40);
+            this.panel22.Controls.Add(this.label41);
+            this.panel22.Controls.Add(this.pictureBox19);
+            this.panel22.Location = new System.Drawing.Point(701, 317);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(121, 118);
+            this.panel22.TabIndex = 10;
+            // 
+            // QntMorangoComplemento
+            // 
+            this.QntMorangoComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntMorangoComplemento.Name = "QntMorangoComplemento";
+            this.QntMorangoComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntMorangoComplemento.TabIndex = 3;
+            this.QntMorangoComplemento.ValueChanged += new System.EventHandler(this.QntMorangoComplemento_ValueChanged);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(1, 56);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(49, 12);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "Morango";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(3, 77);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(45, 13);
+            this.label41.TabIndex = 2;
+            this.label41.Text = "R$ 2,00";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191659;
+            this.pictureBox19.InitialImage = null;
+            this.pictureBox19.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 0;
+            this.pictureBox19.TabStop = false;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel23.Controls.Add(this.QntChocolateComplemento);
+            this.panel23.Controls.Add(this.label42);
+            this.panel23.Controls.Add(this.label43);
+            this.panel23.Controls.Add(this.pictureBox20);
+            this.panel23.Location = new System.Drawing.Point(828, 69);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(121, 118);
+            this.panel23.TabIndex = 10;
+            // 
+            // QntChocolateComplemento
+            // 
+            this.QntChocolateComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntChocolateComplemento.Name = "QntChocolateComplemento";
+            this.QntChocolateComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntChocolateComplemento.TabIndex = 3;
+            this.QntChocolateComplemento.ValueChanged += new System.EventHandler(this.QntChocolateComplemento_ValueChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(1, 56);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(56, 12);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "Chocolate";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 77);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(45, 13);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "R$ 2,00";
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191239;
+            this.pictureBox20.InitialImage = null;
+            this.pictureBox20.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 0;
+            this.pictureBox20.TabStop = false;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel24.Controls.Add(this.QntUvaComplemento);
+            this.panel24.Controls.Add(this.label44);
+            this.panel24.Controls.Add(this.label45);
+            this.panel24.Controls.Add(this.pictureBox21);
+            this.panel24.Location = new System.Drawing.Point(828, 193);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(121, 118);
+            this.panel24.TabIndex = 10;
+            // 
+            // QntUvaComplemento
+            // 
+            this.QntUvaComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntUvaComplemento.Name = "QntUvaComplemento";
+            this.QntUvaComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntUvaComplemento.TabIndex = 3;
+            this.QntUvaComplemento.ValueChanged += new System.EventHandler(this.QntUvaComplemento_ValueChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(1, 56);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(26, 12);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "Uva";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(3, 77);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(45, 13);
+            this.label45.TabIndex = 2;
+            this.label45.Text = "R$ 2,00";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191314;
+            this.pictureBox21.InitialImage = null;
+            this.pictureBox21.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox21.TabIndex = 0;
+            this.pictureBox21.TabStop = false;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel25.Controls.Add(this.QntCarameloComplemento);
+            this.panel25.Controls.Add(this.label46);
+            this.panel25.Controls.Add(this.label47);
+            this.panel25.Controls.Add(this.pictureBox22);
+            this.panel25.Location = new System.Drawing.Point(828, 314);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(121, 118);
+            this.panel25.TabIndex = 10;
+            // 
+            // QntCarameloComplemento
+            // 
+            this.QntCarameloComplemento.Location = new System.Drawing.Point(35, 93);
+            this.QntCarameloComplemento.Name = "QntCarameloComplemento";
+            this.QntCarameloComplemento.Size = new System.Drawing.Size(31, 20);
+            this.QntCarameloComplemento.TabIndex = 3;
+            this.QntCarameloComplemento.ValueChanged += new System.EventHandler(this.QntCarameloComplemento_ValueChanged);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(1, 56);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(53, 12);
+            this.label46.TabIndex = 1;
+            this.label46.Text = "Caramelo";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(3, 77);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(45, 13);
+            this.label47.TabIndex = 2;
+            this.label47.Text = "R$ 2,00";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::MultApps.Windows.Properties.Resources.Captura_de_tela_2025_03_21_191847;
+            this.pictureBox22.InitialImage = null;
+            this.pictureBox22.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(78, 50);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 0;
+            this.pictureBox22.TabStop = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(704, 40);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(248, 20);
+            this.textBox5.TabIndex = 15;
+            this.textBox5.Text = "ESCOLHA  (2X) COBERTURAS";
+            // 
             // frmLojaDeAcai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1082, 592);
+            this.ClientSize = new System.Drawing.Size(1217, 684);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.panel25);
+            this.Controls.Add(this.panel24);
+            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.panel22);
+            this.Controls.Add(this.panel21);
+            this.Controls.Add(this.panel20);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.label34);
-            this.Controls.Add(this.panel18);
+            this.Controls.Add(this.panelPedidoItem);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel15);
@@ -1192,52 +1598,76 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLeiteCondensado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLeiteEmPo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntPaçoca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntOvomaltine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntGranulado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntAbacaxi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntManga)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntKiwi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntUva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntMorango)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QntBanana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
+            this.panelPedidoItem.ResumeLayout(false);
+            this.panelPedidoItem.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntGroseliaComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntLimãoComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntMorangoComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntChocolateComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntUvaComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QntCarameloComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1274,62 +1704,62 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown QntLeiteCondensado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown QntLeiteEmPo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown QntPaçoca;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown QntOvomaltine;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown QntGranulado;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown QntAbacaxi;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown QntManga;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown QntKiwi;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown QntUva;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown QntMorango;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.NumericUpDown QntBanana;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panelPedidoItem;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label34;
@@ -1342,5 +1772,39 @@
         private System.Windows.Forms.ListBox lbxFrutas;
         private System.Windows.Forms.ListBox lbxComplementos;
         private System.Windows.Forms.ListBox lbxTamanho;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.NumericUpDown QntGroseliaComplemento;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.NumericUpDown QntLimãoComplemento;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.NumericUpDown QntMorangoComplemento;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.NumericUpDown QntChocolateComplemento;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.NumericUpDown QntUvaComplemento;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.NumericUpDown QntCarameloComplemento;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ListBox lbxCoberturas;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.ListBox lbxTotal;
     }
 }
