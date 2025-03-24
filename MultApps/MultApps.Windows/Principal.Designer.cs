@@ -34,6 +34,8 @@
             this.calculadoraDeAposentadoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeCarteirinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lojaAçaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lojaDeAçaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,8 @@
             // 
             this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.calculadorasToolStripMenuItem,
-            this.geradoresToolStripMenuItem});
+            this.geradoresToolStripMenuItem,
+            this.lojaAçaiToolStripMenuItem});
             this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
             this.menuStripPrincipal.Size = new System.Drawing.Size(800, 24);
@@ -86,6 +89,20 @@
             this.geradorDeCarteirinhaToolStripMenuItem.Text = "Gerador de carteirinha";
             this.geradorDeCarteirinhaToolStripMenuItem.Click += new System.EventHandler(this.geradorDeCarteirinhaToolStripMenuItem_Click);
             // 
+            // lojaAçaiToolStripMenuItem
+            // 
+            this.lojaAçaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lojaDeAçaiToolStripMenuItem});
+            this.lojaAçaiToolStripMenuItem.Name = "lojaAçaiToolStripMenuItem";
+            this.lojaAçaiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.lojaAçaiToolStripMenuItem.Text = "loja açai";
+            // 
+            // lojaDeAçaiToolStripMenuItem
+            // 
+            this.lojaDeAçaiToolStripMenuItem.Name = "lojaDeAçaiToolStripMenuItem";
+            this.lojaDeAçaiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lojaDeAçaiToolStripMenuItem.Text = "Loja de açai";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,5 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem calculadoraDeAposentadoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeCarteirinhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lojaAçaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lojaDeAçaiToolStripMenuItem;
     }
 }
