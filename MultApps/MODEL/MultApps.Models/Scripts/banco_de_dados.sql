@@ -1,0 +1,23 @@
+create database multapps_dev;
+
+USE multapps_dev;
+
+CREATE TABLE IF NOT EXISTS Categoria (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    STATUS ENUM("inativo", "ativo", "excluido") NOT NULL
+);
+CREATE TABLE IF NOT EXISTS Produtos (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    CategoriaId INT NOT NULL, 
+    Nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidade_estoque INT NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    STATUS ENUM('inativo', 'ativo', 'excluido') NOT NULL,
+    FOREIGN KEY (CategoriaId) 
+        REFERENCES Categoria(Id) 
+);
