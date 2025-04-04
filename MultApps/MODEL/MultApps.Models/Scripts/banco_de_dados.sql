@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Produtos (
     quantidade_estoque INT NOT NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    STATUS ENUM('inativo', 'ativo', 'excluido') NOT NULL,
+    STATUS ENUM('inativo', 'ativo', 'excluido') DEFAULT 'ativo' NOT NULL,
     FOREIGN KEY (CategoriaId) 
         REFERENCES Categoria(Id) 
 );
