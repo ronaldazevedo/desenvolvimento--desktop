@@ -1,10 +1,5 @@
 ﻿using MultApps.Models.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MultApps.Models.Enums;
 
 namespace MultApps.Models.Entities.Abstract
 {

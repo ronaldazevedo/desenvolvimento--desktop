@@ -32,14 +32,16 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtAlteracao = new System.Windows.Forms.TextBox();
-            this.lblDataCriacao = new System.Windows.Forms.Label();
+            this.txtDataCadastro = new System.Windows.Forms.TextBox();
+            this.lblDataCadastro = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblDataAlteracao = new System.Windows.Forms.Label();
             this.txtDataAlteracao = new System.Windows.Forms.TextBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.lblCategoriaProdutos = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -81,23 +83,23 @@
             this.txtNome.Size = new System.Drawing.Size(64, 21);
             this.txtNome.TabIndex = 3;
             // 
-            // txtAlteracao
+            // txtDataCadastro
             // 
-            this.txtAlteracao.Enabled = false;
-            this.txtAlteracao.Location = new System.Drawing.Point(244, 64);
-            this.txtAlteracao.Name = "txtAlteracao";
-            this.txtAlteracao.Size = new System.Drawing.Size(117, 21);
-            this.txtAlteracao.TabIndex = 5;
+            this.txtDataCadastro.Enabled = false;
+            this.txtDataCadastro.Location = new System.Drawing.Point(244, 64);
+            this.txtDataCadastro.Name = "txtDataCadastro";
+            this.txtDataCadastro.Size = new System.Drawing.Size(117, 21);
+            this.txtDataCadastro.TabIndex = 5;
             // 
-            // lblDataCriacao
+            // lblDataCadastro
             // 
-            this.lblDataCriacao.AutoSize = true;
-            this.lblDataCriacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataCriacao.Location = new System.Drawing.Point(241, 43);
-            this.lblDataCriacao.Name = "lblDataCriacao";
-            this.lblDataCriacao.Size = new System.Drawing.Size(120, 16);
-            this.lblDataCriacao.TabIndex = 7;
-            this.lblDataCriacao.Text = "Data de Criação";
+            this.lblDataCadastro.AutoSize = true;
+            this.lblDataCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataCadastro.Location = new System.Drawing.Point(241, 43);
+            this.lblDataCadastro.Name = "lblDataCadastro";
+            this.lblDataCadastro.Size = new System.Drawing.Size(120, 16);
+            this.lblDataCadastro.TabIndex = 7;
+            this.lblDataCadastro.Text = "Data de Criação";
             // 
             // lblStatus
             // 
@@ -141,17 +143,20 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(586, 93);
+            this.btnSalvar.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnSalvar.Location = new System.Drawing.Point(586, 108);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(138, 23);
             this.btnSalvar.TabIndex = 14;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.btnDeletar);
+            this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Controls.Add(this.btnSalvar);
             this.groupBox1.Controls.Add(this.lblNome);
@@ -160,9 +165,9 @@
             this.groupBox1.Controls.Add(this.txtDataAlteracao);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.lblDataAlteracao);
-            this.groupBox1.Controls.Add(this.txtAlteracao);
+            this.groupBox1.Controls.Add(this.txtDataCadastro);
             this.groupBox1.Controls.Add(this.lblStatus);
-            this.groupBox1.Controls.Add(this.lblDataCriacao);
+            this.groupBox1.Controls.Add(this.lblDataCadastro);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 61);
             this.groupBox1.Name = "groupBox1";
@@ -170,6 +175,27 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar nova categoria";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Enabled = false;
+            this.btnDeletar.Location = new System.Drawing.Point(487, 108);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.TabIndex = 17;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(675, 20);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblCategoriaProdutos
             // 
@@ -190,6 +216,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 207);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // FrmCategoria
             // 
@@ -216,8 +243,8 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtAlteracao;
-        private System.Windows.Forms.Label lblDataCriacao;
+        private System.Windows.Forms.TextBox txtDataCadastro;
+        private System.Windows.Forms.Label lblDataCadastro;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblDataAlteracao;
         private System.Windows.Forms.TextBox txtDataAlteracao;
@@ -226,5 +253,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblCategoriaProdutos;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }

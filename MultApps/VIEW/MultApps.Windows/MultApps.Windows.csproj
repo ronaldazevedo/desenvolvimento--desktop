@@ -84,6 +84,7 @@
       <DependentUpon>frmLojaDeAcai.cs</DependentUpon>
     </Compile>
     <Compile Include="ImcImagem.cs" />
+    <Compile Include="MySqlConnection.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
