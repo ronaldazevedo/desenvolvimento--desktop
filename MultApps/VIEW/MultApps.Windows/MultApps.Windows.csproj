@@ -65,9 +65,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadastroUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FrmCadastroUsuarios.cs" />
     <Compile Include="FrmCadastroUsuarios.Designer.cs">
       <DependentUpon>FrmCadastroUsuarios.cs</DependentUpon>
     </Compile>

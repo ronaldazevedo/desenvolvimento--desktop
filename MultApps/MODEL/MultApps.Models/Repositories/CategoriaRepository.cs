@@ -1,12 +1,11 @@
 ﻿using Dapper;
 using MultApps.Models.Entities;
-using MultApps.Models.Enums;
 using MySql.Data.MySqlClient;
-using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Linq;
+
+
 
 namespace MultApps.Models.Repositories
 {
@@ -23,7 +22,7 @@ namespace MultApps.Models.Repositories
 
                 var parametros = new DynamicParameters();
                 parametros.Add("@Nome", categoria.Nome);
-                parametros.Add("@Status", categoria.Status);
+                parametros.Add("@Status", categoria.);
 
                 var resultado = db.Execute(comandoSql, parametros);
                 return resultado > 0;

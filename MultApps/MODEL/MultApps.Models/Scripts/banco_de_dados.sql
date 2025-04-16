@@ -21,3 +21,18 @@ CREATE TABLE IF NOT EXISTS Produtos (
     FOREIGN KEY (CategoriaId) 
         REFERENCES Categoria(Id) 
 );
+
+create database multapps_dev;
+
+USE multapps_dev;
+
+CREATE TABLE IF NOT EXISTS Usuario (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+	cpf VARCHAR(14) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    STATUS ENUM("inativo", "ativo", "excluido") NOT NULL
+);
