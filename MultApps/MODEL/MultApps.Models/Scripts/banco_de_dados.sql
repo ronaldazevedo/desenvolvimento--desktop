@@ -1,38 +1,35 @@
-create database multapps_dev;
+CREATE DATABASE IF NOT EXISTS multapps_dev;
 
 USE multapps_dev;
 
-CREATE TABLE IF NOT EXISTS Categoria (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS categoria (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    STATUS ENUM("inativo", "ativo", "excluido") NOT NULL
+    status ENUM('inativo', 'ativo', 'excluido') NOT NULL
 );
-CREATE TABLE IF NOT EXISTS Produtos (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    CategoriaId INT NOT NULL, 
-    Nome VARCHAR(255) NOT NULL,
-    preco DECIMAL(10, 2) NOT NULL,
+
+CREATE TABLE IF NOT EXISTS produto (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    categoria_id INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL, -- Definição da precisão do decimal
     quantidade_estoque INT NOT NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    STATUS ENUM('inativo', 'ativo', 'excluido') DEFAULT 'ativo' NOT NULL,
-    FOREIGN KEY (CategoriaId) 
-        REFERENCES Categoria(Id) 
+    status ENUM('inativo', 'ativo', 'excluido') NOT NULL,
+    FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );
 
-create database multapps_dev;
-
-USE multapps_dev;
-
-CREATE TABLE IF NOT EXISTS Usuario (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(255) NOT NULL,
-	cpf VARCHAR(14) NOT NULL,
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(20) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha VARCHAR(255) NOT NULL,
-    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    senha VARCHAR(10) NOT NULL,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    STATUS ENUM("inativo", "ativo", "excluido") NOT NULL
+    data_ultimo_acesso Datetime,
+    status ENUM('inativo', 'ativo') NOT NULL
 );

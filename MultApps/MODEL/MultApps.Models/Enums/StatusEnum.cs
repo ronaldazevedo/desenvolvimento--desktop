@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MultApps.Models.Enums;
 
 namespace MultApps.Models.Enums
 {
-   
-        public enum StatusEnum
-        {
-            Inativo = 0,
-            Ativo  = 1,
-            Excluido = 2,
-        }
-
-    
+    public enum StatusEnum
+    {
+        Inativo = 0,
+        Ativo = 1,
+        Excluido = 2
+    }
 }

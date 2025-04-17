@@ -1,17 +1,16 @@
-﻿using Dapper;
-using MultApps.Models.Entities;
-using MySql.Data.MySqlClient;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-
-
+using Dapper;
+using MultApps.Models.Entities;
+using MySql.Data.MySqlClient;
 
 namespace MultApps.Models.Repositories
 {
     public class CategoriaRepository
     {
-        public string ConnectionString = "Server=localhost;Database=multapps_dev;Uid=root;Pwd=root";
+        public string ConnectionString = "Server=localhost;Database=multapps_dev; Uid=root;Pwd=SuperSenha@10";
+
 
         public bool CadastrarCategoria(Categoria categoria)
         {
@@ -22,7 +21,7 @@ namespace MultApps.Models.Repositories
 
                 var parametros = new DynamicParameters();
                 parametros.Add("@Nome", categoria.Nome);
-                parametros.Add("@Status", categoria.);
+                parametros.Add("@Status", categoria.Status);
 
                 var resultado = db.Execute(comandoSql, parametros);
                 return resultado > 0;

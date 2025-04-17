@@ -1,4 +1,5 @@
-﻿using MultApps.Models.Entities.Abstract;
+﻿using MultApps.Models.Entidades;
+using MultApps.Models.Entities.Abstract;
 
 namespace MultApps.Models.Entities
 {
@@ -8,8 +9,5 @@ namespace MultApps.Models.Entities
         public string Nome { get; set; }
         public decimal Preco { get; set; }
         public int QuantidadeEmEstoque { get; set; }
-        
-        
-
     }
 }

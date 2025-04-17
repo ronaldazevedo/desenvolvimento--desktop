@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
 
 namespace MultApps.Windows
 {
@@ -20,250 +19,157 @@ namespace MultApps.Windows
 
         private void chkCrianca_CheckedChanged(object sender, EventArgs e)
         {
-            chkCrianca.ForeColor = Color.Goldenrod;
-            chkAdulto.ForeColor = Color.DarkGray;
+            chkCrianca.ForeColor = Color.DarkOrange;
+            chkAdulto.ForeColor = Color.Gray;
             chkAdulto.Checked = false;
-            lblMaiorIdade.Text = "Abaixo de 19 anos";
-            lblIMC.Text = "Z IMC para criança";
-
-            lblIdade.Visible = true;
+            lblIdade.Text = "Abaixo de 19 anos";
             cmbIdade.Visible = true;
+            lblIdadeCmb.Visible = true;
+
         }
 
         private void chkAdulto_CheckedChanged(object sender, EventArgs e)
         {
-            chkCrianca.ForeColor = Color.DarkGray;
-            chkAdulto.ForeColor = Color.Goldenrod;
+            chkAdulto.ForeColor = Color.DarkOrange;
+            chkCrianca.ForeColor = Color.Gray;
             chkCrianca.Checked = false;
-            lblMaiorIdade.Text = "Acima de 19 anos";
-            lblIMC.Text = "IMC para adulto";
-
-            lblIdade.Visible = false;
+            lblIdade.Text = "Acima de 19 anos";
             cmbIdade.Visible = false;
-        }
-
-        private void chkMasculino_CheckedChanged(object sender, EventArgs e)
-        {
-            chkMasculino.ForeColor = Color.Goldenrod;
-            chkFeminino.ForeColor = Color.DarkGray;
-            chkFeminino.Checked = false;
-        }
-
-        private void chkFeminino_CheckedChanged(object sender, EventArgs e)
-        {
-            chkFeminino.ForeColor = Color.Goldenrod;
-            chkMasculino.ForeColor = Color.DarkGray;
-            chkMasculino.Checked = false;
+            lblIdadeCmb.Visible = false;
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //primeiro passo: obter os dados
-            var peso = double.Parse(txtPeso.Text);
-            var altura = double.Parse(txtAltura.Text);
-
 
             if (chkAdulto.Checked && chkMasculino.Checked)
             {
-                //ADULTO MASCULINO: calcular com os dados
-                #region adulto masculino
-
-                var imc = peso / (altura * altura);
-                var TextoBase = $@"Seu IMC : {imc:N2}";
-
-                //exibir o resultado
-                lblResultadoImc.Text = imc.ToString("N2");
-
-                if (imc <= 18.5)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                    picboxImc.Load(ImcImagem.MasculinoAbaixoDoPesoNormal);
-                }
-                else if (imc <= 24.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é normal";
-                    picboxImc.Load(ImcImagem.MasculinoNormal);
-                }
-                else if (imc <= 29.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                    picboxImc.Load(ImcImagem.MasculinoSobrepeso);
-                }
-                else if (imc <= 34.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 1";
-                    picboxImc.Load(ImcImagem.MasculinoObesidadeGrau1);
-                }
-                else if (imc <= 39.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 2";
-                    picboxImc.Load(ImcImagem.MasculinoObesidadeGrau2);
-                }
-                else if (imc >= 40.0)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 3";
-                    picboxImc.Load(ImcImagem.MasculinoObesidadeGrau3);
-                }
-
-                #endregion
-
+                CalcularImcAdultoMasculino();
+                return;
             }
 
-            else if (chkAdulto.Checked && chkFeminino.Checked)
+            if (chkAdulto.Checked && chkFeminino.Checked)
             {
-                //ADULTO FEMININO: calcular com os dados
-
-                #region adulto feminino
-
-                var imc = peso / (altura * altura);
-                var TextoBase = $@"Seu IMC : {imc:N2}";
-
-                //exibir o resultado
-                lblResultadoImc.Text = imc.ToString("N2");
-
-                if (imc <= 18.5)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                    picboxImc.Load(ImcImagem.FemininoAbaixoDoPesoNormal);
-                }
-                else if (imc <= 24.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é normal";
-                    picboxImc.Load(ImcImagem.FemininoNormal);
-                }
-                else if (imc <= 29.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                    picboxImc.Load(ImcImagem.FemininoSobrepeso);
-                }
-                else if (imc <= 34.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 1";
-                    picboxImc.Load(ImcImagem.FemininoObesidadeGrau1);
-                }
-                else if (imc <= 39.9)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 2";
-                    picboxImc.Load(ImcImagem.FemininoObesidadeGrau2);
-                }
-                else if (imc >= 40.0)
-                {
-                    lblResultadoImc.Text = $@" {TextoBase} é obesidade grau 3";
-                    picboxImc.Load(ImcImagem.FemininoObesidadeGrau3);
-                }
-                #endregion 
-  
+                CalcularImcAdultoFeminino();
+                return;
             }
 
-            else if (chkCrianca.Checked)
+            if (chkCrianca.Checked)
             {
-                //CRIANCA: calcular com os dados
-
-                var imc = peso / (altura * altura);
-                var TextoBase = $@"Seu IMC : {imc:N2}";
-
-                var coisa = cmbIdade.SelectedIndex;
-
-                if (cmbIdade.SelectedIndex == 0)
-                {
-                    if (imc <= 14.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                        picboxImc.Load(ImcImagem.CriancaAbaixoDoPesoNormal);
-                    }
-                    else if (imc <= 17.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é normal";
-                        picboxImc.Load(ImcImagem.CriancaNormal);
-                    }
-                    else if (imc <= 18.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                        picboxImc.Load(ImcImagem.CriancaSobrepeso);
-                    }
-                    else if (imc > 18.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é obesidade";
-                        picboxImc.Load(ImcImagem.CriancaObesidade);
-                    }
-                }
-
-                else if (cmbIdade.SelectedIndex == 1)
-                {
-                    if (imc <= 15.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                        picboxImc.Load(ImcImagem.CriancaAbaixoDoPesoNormal);
-                    }
-                    else if (imc <= 18.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é normal";
-                        picboxImc.Load(ImcImagem.CriancaNormal);
-                    }
-                    else if (imc <= 19.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                        picboxImc.Load(ImcImagem.CriancaSobrepeso);
-                    }
-                    else if (imc > 19.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é obesidade";
-                        picboxImc.Load(ImcImagem.CriancaObesidade);
-                    }
-                }
-
-                else if (cmbIdade.SelectedIndex == 2)
-                {
-                    if (imc <= 16.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                        picboxImc.Load(ImcImagem.CriancaAbaixoDoPesoNormal);
-                    }
-                    else if (imc <= 19.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é normal";
-                        picboxImc.Load(ImcImagem.CriancaNormal);
-                    }
-                    else if (imc <= 20.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                        picboxImc.Load(ImcImagem.CriancaSobrepeso);
-                    }
-                    else if (imc > 20.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é obesidade";
-                        picboxImc.Load(ImcImagem.CriancaObesidade);
-                    }
-
-                }
-
-                else if (cmbIdade.SelectedIndex == 3)
-                {
-                    if (imc <= 17.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é abaixo do normal";
-                        picboxImc.Load(ImcImagem.CriancaAbaixoDoPesoNormal);
-                    }
-                    else if (imc <= 20.0)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é normal";
-                        picboxImc.Load(ImcImagem.CriancaNormal);
-                    }
-                    else if (imc <= 21.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é sobrepeso";
-                        picboxImc.Load(ImcImagem.CriancaSobrepeso);
-                    }
-                    else if (imc <= 21.5)
-                    {
-                        lblResultadoImc.Text = $@" {TextoBase} é obesidade";
-                        picboxImc.Load(ImcImagem.CriancaObesidade);
-                    }
-
-                }
-               
+                CalcularImcCrianca();
+                return;
             }
         }
+        private void CalcularImcAdultoMasculino()
+        {
+            var peso = double.Parse(txtPeso.Text);
+            var altura = double.Parse(txtAltura.Text);
+            var imc = CalcularImc(peso, altura);
+            ExibirResultadoImc(imc, GeneroEnum.Masculino, false);
+        }
 
+        private void CalcularImcAdultoFeminino()
+        {
+            var peso = double.Parse(txtPeso.Text);
+            var altura = double.Parse(txtAltura.Text);
+            var imc = CalcularImc(peso, altura);
+            ExibirResultadoImc(imc, GeneroEnum.Feminino, false);
+        }
+
+        private void CalcularImcCrianca()
+        {
+            var peso = double.Parse(txtPeso.Text);
+            var altura = double.Parse(txtAltura.Text);
+            var imc = CalcularImc(peso, altura);
+
+            var genero = chkMasculino.Checked ? GeneroEnum.Masculino : GeneroEnum.Feminino;
+
+            ExibirResultadoImc(imc, genero, true);
+        }
+
+
+        private double CalcularImc(double peso, double altura)
+        {
+            return peso / (altura * altura);
+        }
+
+        private void ExibirResultadoImc(double imc, GeneroEnum genero, bool ehCrianca)
+        {
+            var textoBase = $@"Meu IMC: {imc:N2} é";
+            string imageUrl = string.Empty;
+
+            if (ehCrianca)
+            {
+                // Lógica específica para crianças
+                if (imc <= 18.5)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} abaixo do normal (criança)";
+                    imageUrl = ImcImagem.CriancaAbaixoDoNormal;
+                }
+                else if (imc < 24.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} normal (criança)";
+                    imageUrl = ImcImagem.CriancaNormal;
+                }
+                else if (imc < 29.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} sobrepeso (criança)";
+                    imageUrl = ImcImagem.CriancaSobrepeso;
+                }
+                else if (imc < 34.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 1 (criança)";
+                    imageUrl = ImcImagem.CriancaSobrepeso;
+                }
+                else if (imc < 39.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 2 (criança)";
+                    imageUrl = ImcImagem.CriancaSobrepeso;
+                }
+                else
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 3 (criança)";
+                    imageUrl = ImcImagem.CriancaSobrepeso;
+                }
+            }
+            else
+            {
+                // Lógica para adultos
+                if (imc <= 18.5)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} abaixo do normal";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoAbaixoDoNormal : ImcImagem.FemininoAbaixoDoNormal;
+                }
+                else if (imc < 24.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} normal";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoNormal : ImcImagem.FemininoNormal;
+                }
+                else if (imc < 29.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} sobrepeso";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoSobrepeso : ImcImagem.FemininoSobrepeso;
+                }
+                else if (imc < 34.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 1";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoObesidadeGrau1 : ImcImagem.FemininoObesidadeGrau1;
+                }
+                else if (imc < 39.9)
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 2";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoObesidadeGrau2 : ImcImagem.FemininoObesidadeGrau2;
+                }
+                else
+                {
+                    lblResultadoImc.Text = $@"{textoBase} obesidade grau 3";
+                    imageUrl = genero == GeneroEnum.Masculino ? ImcImagem.MasculinoObesidadeGrau3 : ImcImagem.FemininoObesidadeGrau3;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(imageUrl))
+            {
+                picBoxImc.Load(imageUrl);
+            }
+        }
     }
 }

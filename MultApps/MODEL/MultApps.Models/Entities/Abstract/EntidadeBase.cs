@@ -1,14 +1,13 @@
-﻿using MultApps.Models.Enums;
-using System;
+﻿using System;
+using MultApps.Models.Enums;
 
 namespace MultApps.Models.Entities.Abstract
 {
-    public class EntidadeBase
+    public abstract class EntidadeBase
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime UltimoAcesso { get; set; }
-        
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataAlteracao { get; set; }
+        public StatusEnum Status { get; set; }
     }
 }
