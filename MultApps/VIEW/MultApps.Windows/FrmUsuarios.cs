@@ -19,12 +19,13 @@ namespace MultApps.Windows
         {
             InitializeComponent();
 
-            var status = new[] {  "ativo", "inativo" };
+            var status = new[] { "inativo", "ativo" };
             var filtros = new[] { "todos", "ativos", "inativos" };
             cmbStatus.Items.AddRange(status);
             cbmFiltro.Items.AddRange(filtros);
 
-           cmbStatus.SelectedIndex = 0;
+
+            cmbStatus.SelectedIndex = 1;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace MultApps.Windows
             try
             {
 
-                if(TemCamposEmBranco())
+                if (TemCamposEmBranco())
                 {
                     return;
                 }
@@ -50,12 +51,12 @@ namespace MultApps.Windows
 
                 var emailJaExiste = usuarioRepository.EmailExistente(usuario.Email);
                 if (emailJaExiste)
-                { 
+                {
                     MessageBox.Show($"O email {usuario.Email} já está cadastrado. ");
                     txtEmail.Focus();
                     return;
                 }
-                
+
                 //3 Passo chamar o método de cadastro.
                 var sucesso = usuarioRepository.CadastrarUsuario(usuario);
 
@@ -115,6 +116,33 @@ namespace MultApps.Windows
                 return true;
             }
             return false;
+        }
+
+        private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+            CarregarTodosUsuario();
+        }
+
+        private void CarregarTodosUsuario()
+        {
+            var usuarioRepository = new UsuarioRepository();
+
+            var listarUsuario = usuarioRepository.ListarUsuarios();
+            dataGridView1.DataSource = listarUsuario;
+        }
+
+        private void limparCampos()
+        {
+            mtbCpf.Clear();
+            txtEmail.Clear();
+            txtNome.Clear();
+            txtSenha.Clear();
+            txtDataCadastro.Clear();
+            txtUltimoAcesso.Clear();
+            cmbStatus.SelectedIndex = 1;
+              
+
+            
         }
     }
 }
