@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MultApps.Models.Entities;
 using MultApps.Models.Enums;
 using MultApps.Models.Repositories;
+using MultApps.Models.Services;
 
 namespace MultApps.Windows
 {
@@ -26,6 +27,7 @@ namespace MultApps.Windows
 
 
             cmbStatus.SelectedIndex = 1;
+            cbmFiltro.SelectedIndex = 0;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -39,11 +41,12 @@ namespace MultApps.Windows
                 {
                     return;
                 }
+
                 var usuario = new Usuario();
                 usuario.Nome = txtNome.Text;
                 usuario.Cpf = mtbCpf.Text;
                 usuario.Email = txtEmail.Text;
-                usuario.Senha = txtSenha.Text;
+                usuario.Senha = CriptografiaService.Criptografar(txtSenha.Text);
                 usuario.Status = (StatusEnum)cmbStatus.SelectedIndex;
 
                 //2 Passo criar o objeto de repositório.
@@ -143,6 +146,62 @@ namespace MultApps.Windows
               
 
             
+        }
+
+        private void cbmFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var usuarioRepositorio = new UsuarioRepository();
+            switch (cbmFiltro.SelectedIndex)
+            {
+                case 0:
+                    CarregarTodosUsuario();
+                    break;
+
+                case 1:
+                    var usuariosAtivos = usuarioRepositorio.ListarUsuariosPorStatus("ativo");
+                    dataGridView1.DataSource = usuariosAtivos;
+                    break;
+
+                case 2:
+                    var usuariosInativos = usuarioRepositorio.ListarUsuariosPorStatus("inativo");
+                    dataGridView1.DataSource = usuariosInativos;
+                    break;
+            }
+
+
+           
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                MessageBox.Show($"Houve um erro ao clicar duas vezes sobre o Grid");
+                return;
+            }
+
+            // Obtenha a linha selecionada
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+            // Obtenha o ID da categoria da linha selecionada
+            var usuario = (int)row.Cells[0].Value;
+
+            // Use o método ObterCategoriaPorId para buscar os dados da categoria no banco de dados
+            var usuarioRepository = new UsuarioRepository();
+            var usuario = usuarioRepository.ListarUsuariosPorStatus(usuario);
+
+            if (usuario == null)
+            {
+                MessageBox.Show($"Categoria: #{usuario} não encontrada");
+                return;
+            }
+            // Preencha os campos de edição com os dados obtidos
+            txtNome.Text = usuario.Nome;
+            mtbCpf.Text = usuario.cpf;
+            cmbStatus.SelectedIndex = (int)usuario.Status;
+            txtDataCadastro.Text = usuario.DataCadastro.ToString("dd/MM/yyyy HH:mm");
+            txtUltimoAcesso.Text = usuario.UltimoAcesso.ToString("dd/MM/yyyy HH:mm");
+
         }
     }
 }

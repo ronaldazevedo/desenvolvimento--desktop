@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace MultApps.Models.Services
 {
-    public class CriptografiaService
+    public static class CriptografiaService
     {
-        public string Criptografar(string senha)
+        public static string Criptografar(string senha)
         {
-           
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(senha);
+            return passwordHash;
 
         }
 
-        public string Verificar(string senha, string senhaCriptografia) 
+        public static  bool Verificar(string senha, string senhaCriptografia) 
         {
+            return BCrypt.Net.BCrypt.Verify(senha, senhaCriptografia);
         }
     }
 }

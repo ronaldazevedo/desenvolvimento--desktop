@@ -78,6 +78,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(885, 608);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label9
             // 
@@ -96,6 +97,7 @@
             this.cbmFiltro.Name = "cbmFiltro";
             this.cbmFiltro.Size = new System.Drawing.Size(204, 28);
             this.cbmFiltro.TabIndex = 17;
+            this.cbmFiltro.SelectedIndexChanged += new System.EventHandler(this.cbmFiltro_SelectedIndexChanged);
             // 
             // panel2
             // 

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Design;
+﻿using System;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
 using Dapper;
@@ -56,7 +57,7 @@ namespace MultApps.Models.Repositories
                                           data_cadastro AS DataCadastro,
                                           data_alteracao AS DataAlteracao,
                                           data_ultimo_acesso AS DataUltimoAcesso     
-                                   FROM Usuario";
+                                   FROM usuario";
                 var usuarios = db.Query<Usuario>(comandoSql).ToList();
                 // Converte a lista de usuários para um DataTable
                 var dataTable = new DataTable();
@@ -64,16 +65,15 @@ namespace MultApps.Models.Repositories
                 dataTable.Columns.Add("Nome", typeof(string));
                 dataTable.Columns.Add("Cpf", typeof(string));
                 dataTable.Columns.Add("Email", typeof(string));
-                dataTable.Columns.Add("DataCadastro", typeof(DataTable));
-                dataTable.Columns.Add("DataAltercao" , typeof(DataTable));
-                dataTable.Columns.Add("DataUltimoAcesso", typeof(DataTable));
+                dataTable.Columns.Add("Data Cadastro", typeof(DateTime));
+                dataTable.Columns.Add("Data Alteracao", typeof(DateTime));
+                dataTable.Columns.Add("Data Ultimo Acesso", typeof(DateTime));
                 foreach (var usuario in usuarios)
                 {
                     dataTable.Rows.Add(usuario.Id,
                         usuario.Nome,
                         usuario.Cpf,
                         usuario.Email,
-                        usuario.Status,
                         usuario.DataCriacao,
                         usuario.DataAlteracao,
                         usuario.DataUltimoAcesso);
@@ -81,5 +81,69 @@ namespace MultApps.Models.Repositories
                 return dataTable;
             }
         }
+
+        public DataTable ListarUsuariosPorStatus(string status)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"SELECT id AS Id, 
+                                          nome AS Nome, 
+                                          cpf AS Cpf, 
+                                          email AS Email, 
+                                          data_cadastro AS DataCadastro,
+                                          data_alteracao AS DataAlteracao,
+                                          data_ultimo_acesso AS DataUltimoAcesso     
+                                   FROM usuario
+                                   WHERE status = @Status";
+
+                var parametros = new DynamicParameters();
+                parametros.Add("@Status", status);
+
+                var usuarios = db.Query<Usuario>(comandoSql, parametros).ToList();
+                // Converte a lista de usuários para um DataTable
+                var dataTable = new DataTable();
+                dataTable.Columns.Add("Id", typeof(int));
+                dataTable.Columns.Add("Nome", typeof(string));
+                dataTable.Columns.Add("Cpf", typeof(string));
+                dataTable.Columns.Add("Email", typeof(string));
+                dataTable.Columns.Add("Data Cadastro", typeof(DateTime));
+                dataTable.Columns.Add("Data Alteracao", typeof(DateTime));
+                dataTable.Columns.Add("Data Ultimo Acesso", typeof(DateTime));
+                foreach (var usuario in usuarios)
+                {
+                    dataTable.Rows.Add(usuario.Id,
+                        usuario.Nome,
+                        usuario.Cpf,
+                        usuario.Email,
+                        usuario.DataCriacao,
+                        usuario.DataAlteracao,
+                        usuario.DataUltimoAcesso);
+                }
+                return dataTable;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
