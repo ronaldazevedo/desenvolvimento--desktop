@@ -176,32 +176,36 @@ namespace MultApps.Windows
         {
             if (e.RowIndex < 0)
             {
-                MessageBox.Show($"Houve um erro ao clicar duas vezes sobre o Grid");
+                MessageBox.Show("Houve um erro ao clicar duas vezes sobre o Grid");
                 return;
             }
+
 
             // Obtenha a linha selecionada
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
             // Obtenha o ID da categoria da linha selecionada
-            var usuario = (int)row.Cells[0].Value;
+            int usuarioId = (int)row.Cells[0].Value;
 
             // Use o método ObterCategoriaPorId para buscar os dados da categoria no banco de dados
             var usuarioRepository = new UsuarioRepository();
-            var usuario = usuarioRepository.ListarUsuariosPorStatus(usuario);
+            var usuario = usuarioRepository.ObterUsuarioPorId(usuarioId);
 
             if (usuario == null)
             {
-                MessageBox.Show($"Categoria: #{usuario} não encontrada");
+                MessageBox.Show($"Usuário com ID #{usuarioId} não encontrado");
                 return;
             }
             // Preencha os campos de edição com os dados obtidos
             txtNome.Text = usuario.Nome;
-            mtbCpf.Text = usuario.cpf;
+            mtbCpf.Text = usuario.Cpf;
+            txtEmail.Text = usuario.Email;
+            txtSenha.Text = usuario.Senha;
+            txtDataCadastro.Text = usuario.DataCriacao.ToString("dd/MM/yyyy HH:mm");
+            txtUltimoAcesso.Text = usuario.DataUltimoAcesso.ToString("dd/MM/yyyy HH:mm");
             cmbStatus.SelectedIndex = (int)usuario.Status;
-            txtDataCadastro.Text = usuario.DataCadastro.ToString("dd/MM/yyyy HH:mm");
-            txtUltimoAcesso.Text = usuario.UltimoAcesso.ToString("dd/MM/yyyy HH:mm");
 
+            btnSalvar.Text = "Salvar alterações";
         }
     }
 }

@@ -123,6 +123,18 @@ namespace MultApps.Models.Repositories
             }
         }
 
+        public Usuario ObterUsuarioPorId(int id)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"SELECT id AS Id, nome AS Nome, cpf AS Cpf, email AS Email, data_cadastro AS  DataCriacao, data_ultimo_acesso AS DataUltimoAcesso, status AS Status
+                                   FROM usuario WHERE id = @Id";
+                var parametros = new DynamicParameters();
+                parametros.Add("@Id", id);
+                var resultado = db.Query<Usuario>(comandoSql, parametros).FirstOrDefault();
+                return resultado;
+            }
+        }
 
 
 
