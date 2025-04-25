@@ -136,25 +136,38 @@ namespace MultApps.Models.Repositories
             }
         }
 
+        public Usuario ObterUsuarioPorEmail(string email)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                var comandoSql = @"SELECT id AS Id, nome AS Nome, email AS Email, senha AS Senha, status AS Status
+                                   FROM usuario WHERE email = @Email";
+                var parametros = new DynamicParameters();
+                parametros.Add("@Email",email );
+                var resultado = db.Query<Usuario>(comandoSql, parametros).FirstOrDefault();
+                return resultado;
+            }
+        }
 
 
+        public bool AtualizarSenha (string novaSenha, string email)
+        {
+            using (IDbConnection db = new MySqlConnection(ConnectionString))
+            {
+                //Colocar o comando SQL que atualiza dados na tabela.
+                var comandoSql = @"UPDATE usuario
+                                   SET senha = @Senha
+                                   WHERE email = @Email";
 
+                var parametros = new DynamicParameters();
+                parametros.Add("@Senha", novaSenha);
+                parametros.Add("@Email", email);
+              
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                var resposta = db.Execute(comandoSql, parametros);
+                return resposta > 0;
+            }
+        }
 
 
     }
