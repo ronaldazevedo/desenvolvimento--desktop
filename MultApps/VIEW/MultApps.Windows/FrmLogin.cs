@@ -31,7 +31,7 @@ namespace MultApps.Windows
 
             if (string.IsNullOrEmpty(txtSenha.Text))
             {
-                MessageBox.Show("Senha é obrigatorio");
+                MessageBox.Show("Senha é obrigatoria");
                 txtSenha.Focus();
                 return;
             }
@@ -39,53 +39,54 @@ namespace MultApps.Windows
             var usuarioRepository = new UsuarioRepository();
             var usuario = usuarioRepository.ObterUsuarioPorEmail(txtUsuario.Text);
 
-            if (usuario != null|| usuario.Email != txtUsuario.Text) 
+            //se o objeto usuário for nulo ou o email do banco é diferente do txtUsuario
+            if (usuario == null || usuario.Email != txtUsuario.Text)
             {
                 MessageBox.Show("Usuário não encontrado");
                 txtUsuario.Focus();
                 return;
-
             }
 
             if (usuario.Status == StatusEnum.Inativo)
             {
-                MessageBox.Show("Usuário está Inativo");
+                MessageBox.Show("O usuário está inativo");
                 txtUsuario.Focus();
                 return;
             }
 
-            var senhaConfere = CriptografiaService.Verificar(txtSenha.Text , usuario.Senha);
+            var senhaConfere = CriptografiaService.Verificar(txtSenha.Text, usuario.Senha);
 
             if (senhaConfere)
             {
-                MessageBox.Show("Usuário e senha correto");
-                
+                var formPrincipal = new Principal(usuario);
+                formPrincipal.Show();
             }
             else
             {
-                MessageBox.Show("Usuário ou senha inválida");
+                MessageBox.Show("Usuário ou senha invalida");
             }
         }
+
 
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsuario.Text))
             {
-                MessageBox.Show("UInforme o email do seu usuário");
+                MessageBox.Show("Informe o email do seu usuário");
                 txtUsuario.Focus();
                 return;
-
             }
 
-            var usuarioRepositoty = new UsuarioRepository();
+            var usuarioRepository = new UsuarioRepository();
 
-            var novaSenha = CriptografiaService.Criptografar("13456");
+            //gerar uma nova senha para o usuário
+            var novaSenha = CriptografiaService.Criptografar("123456");
 
-            var senhaAtualizou = usuarioRepositoty.AtualizarSenha(novaSenha, txtUsuario.Text);
+            var senhaAtualizou = usuarioRepository.AtualizarSenha(novaSenha, txtUsuario.Text);
 
             if (senhaAtualizou)
-            { 
-                MessageBox.Show ($"Senha atualizada com sucesso. A nova senha é: 123456");
+            {
+                MessageBox.Show($"Senha atualizada com sucesso. A nova senha é: 123456");
             }
             else
             {
