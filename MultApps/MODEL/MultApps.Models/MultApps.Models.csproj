@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Entities\Abstract\EntidadeBase.cs" />
+    <Compile Include="Entities\Produtos.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Produto.cs" />
