@@ -43,24 +43,24 @@
             this.Estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNomeProduto = new System.Windows.Forms.Label();
-            this.txtNomeProduto = new System.Windows.Forms.TextBox();
-            this.lblCategorias = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.lblPreco = new System.Windows.Forms.Label();
-            this.txtEstoque = new System.Windows.Forms.TextBox();
-            this.lblEstoque = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.rbInativo = new System.Windows.Forms.RadioButton();
+            this.rbAtivo = new System.Windows.Forms.RadioButton();
+            this.LblStatus2 = new System.Windows.Forms.Label();
             this.txtUrlImagem = new System.Windows.Forms.TextBox();
             this.lblUrlImagem = new System.Windows.Forms.Label();
-            this.LblStatus2 = new System.Windows.Forms.Label();
-            this.rbAtivo = new System.Windows.Forms.RadioButton();
-            this.rbInativo = new System.Windows.Forms.RadioButton();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtEstoque = new System.Windows.Forms.TextBox();
+            this.lblEstoque = new System.Windows.Forms.Label();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.lblPreco = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lblCategorias = new System.Windows.Forms.Label();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.lblNomeProduto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -211,95 +211,71 @@
             this.panel1.Size = new System.Drawing.Size(762, 359);
             this.panel1.TabIndex = 7;
             // 
-            // lblNomeProduto
+            // btnExcluir
             // 
-            this.lblNomeProduto.AutoSize = true;
-            this.lblNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.Location = new System.Drawing.Point(16, 18);
-            this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(130, 16);
-            this.lblNomeProduto.TabIndex = 0;
-            this.lblNomeProduto.Text = "Nome Do Produto";
+            this.btnExcluir.BackColor = System.Drawing.Color.Red;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(237, 325);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 18;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // txtNomeProduto
+            // btnLimpar
             // 
-            this.txtNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeProduto.Location = new System.Drawing.Point(19, 37);
-            this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(354, 22);
-            this.txtNomeProduto.TabIndex = 2;
+            this.btnLimpar.BackColor = System.Drawing.Color.Yellow;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(137, 325);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 17;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
             // 
-            // lblCategorias
+            // btnSalvar
             // 
-            this.lblCategorias.AutoSize = true;
-            this.lblCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorias.Location = new System.Drawing.Point(389, 18);
-            this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(75, 16);
-            this.lblCategorias.TabIndex = 3;
-            this.lblCategorias.Text = "Categoria";
+            this.btnSalvar.BackColor = System.Drawing.Color.Lime;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(29, 325);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(85, 23);
+            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
-            // txtCategoria
+            // rbInativo
             // 
-            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(392, 37);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(354, 22);
-            this.txtCategoria.TabIndex = 4;
+            this.rbInativo.AutoSize = true;
+            this.rbInativo.Location = new System.Drawing.Point(477, 280);
+            this.rbInativo.Name = "rbInativo";
+            this.rbInativo.Size = new System.Drawing.Size(57, 17);
+            this.rbInativo.TabIndex = 15;
+            this.rbInativo.TabStop = true;
+            this.rbInativo.Text = "Inativo";
+            this.rbInativo.UseVisualStyleBackColor = true;
             // 
-            // txtDescricao
+            // rbAtivo
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(19, 113);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(714, 59);
-            this.txtDescricao.TabIndex = 5;
+            this.rbAtivo.AutoSize = true;
+            this.rbAtivo.Location = new System.Drawing.Point(422, 280);
+            this.rbAtivo.Name = "rbAtivo";
+            this.rbAtivo.Size = new System.Drawing.Size(49, 17);
+            this.rbAtivo.TabIndex = 14;
+            this.rbAtivo.TabStop = true;
+            this.rbAtivo.Text = "Ativo";
+            this.rbAtivo.UseVisualStyleBackColor = true;
             // 
-            // lblDescricao
+            // LblStatus2
             // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(16, 94);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(78, 16);
-            this.lblDescricao.TabIndex = 6;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.Location = new System.Drawing.Point(19, 214);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(354, 22);
-            this.txtPreco.TabIndex = 8;
-            // 
-            // lblPreco
-            // 
-            this.lblPreco.AutoSize = true;
-            this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.Location = new System.Drawing.Point(16, 195);
-            this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(48, 16);
-            this.lblPreco.TabIndex = 7;
-            this.lblPreco.Text = "Preço";
-            // 
-            // txtEstoque
-            // 
-            this.txtEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstoque.Location = new System.Drawing.Point(382, 214);
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(354, 22);
-            this.txtEstoque.TabIndex = 10;
-            // 
-            // lblEstoque
-            // 
-            this.lblEstoque.AutoSize = true;
-            this.lblEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstoque.Location = new System.Drawing.Point(379, 195);
-            this.lblEstoque.Name = "lblEstoque";
-            this.lblEstoque.Size = new System.Drawing.Size(64, 16);
-            this.lblEstoque.TabIndex = 9;
-            this.lblEstoque.Text = "Estoque";
+            this.LblStatus2.AutoSize = true;
+            this.LblStatus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatus2.Location = new System.Drawing.Point(441, 258);
+            this.LblStatus2.Name = "LblStatus2";
+            this.LblStatus2.Size = new System.Drawing.Size(50, 16);
+            this.LblStatus2.TabIndex = 13;
+            this.LblStatus2.Text = "Status";
             // 
             // txtUrlImagem
             // 
@@ -319,70 +295,95 @@
             this.lblUrlImagem.TabIndex = 11;
             this.lblUrlImagem.Text = "URL da  Imagem";
             // 
-            // LblStatus2
+            // txtEstoque
             // 
-            this.LblStatus2.AutoSize = true;
-            this.LblStatus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStatus2.Location = new System.Drawing.Point(441, 258);
-            this.LblStatus2.Name = "LblStatus2";
-            this.LblStatus2.Size = new System.Drawing.Size(50, 16);
-            this.LblStatus2.TabIndex = 13;
-            this.LblStatus2.Text = "Status";
+            this.txtEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoque.Location = new System.Drawing.Point(382, 214);
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Size = new System.Drawing.Size(354, 22);
+            this.txtEstoque.TabIndex = 10;
             // 
-            // rbAtivo
+            // lblEstoque
             // 
-            this.rbAtivo.AutoSize = true;
-            this.rbAtivo.Location = new System.Drawing.Point(422, 280);
-            this.rbAtivo.Name = "rbAtivo";
-            this.rbAtivo.Size = new System.Drawing.Size(49, 17);
-            this.rbAtivo.TabIndex = 14;
-            this.rbAtivo.TabStop = true;
-            this.rbAtivo.Text = "Ativo";
-            this.rbAtivo.UseVisualStyleBackColor = true;
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstoque.Location = new System.Drawing.Point(379, 195);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(64, 16);
+            this.lblEstoque.TabIndex = 9;
+            this.lblEstoque.Text = "Estoque";
             // 
-            // rbInativo
+            // txtPreco
             // 
-            this.rbInativo.AutoSize = true;
-            this.rbInativo.Location = new System.Drawing.Point(477, 280);
-            this.rbInativo.Name = "rbInativo";
-            this.rbInativo.Size = new System.Drawing.Size(57, 17);
-            this.rbInativo.TabIndex = 15;
-            this.rbInativo.TabStop = true;
-            this.rbInativo.Text = "Inativo";
-            this.rbInativo.UseVisualStyleBackColor = true;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(19, 214);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(354, 22);
+            this.txtPreco.TabIndex = 8;
             // 
-            // btnSalvar
+            // lblPreco
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.Lime;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(29, 325);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(85, 23);
-            this.btnSalvar.TabIndex = 16;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreco.Location = new System.Drawing.Point(16, 195);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(48, 16);
+            this.lblPreco.TabIndex = 7;
+            this.lblPreco.Text = "Preço";
             // 
-            // btnLimpar
+            // lblDescricao
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.Yellow;
-            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(137, 325);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 17;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(16, 94);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(78, 16);
+            this.lblDescricao.TabIndex = 6;
+            this.lblDescricao.Text = "Descrição";
             // 
-            // btnExcluir
+            // txtDescricao
             // 
-            this.btnExcluir.BackColor = System.Drawing.Color.Red;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(237, 325);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 18;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.txtDescricao.Location = new System.Drawing.Point(19, 113);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(714, 59);
+            this.txtDescricao.TabIndex = 5;
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(392, 37);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(354, 22);
+            this.txtCategoria.TabIndex = 4;
+            // 
+            // lblCategorias
+            // 
+            this.lblCategorias.AutoSize = true;
+            this.lblCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategorias.Location = new System.Drawing.Point(389, 18);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(75, 16);
+            this.lblCategorias.TabIndex = 3;
+            this.lblCategorias.Text = "Categoria";
+            // 
+            // txtNomeProduto
+            // 
+            this.txtNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeProduto.Location = new System.Drawing.Point(19, 37);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(354, 22);
+            this.txtNomeProduto.TabIndex = 2;
+            // 
+            // lblNomeProduto
+            // 
+            this.lblNomeProduto.AutoSize = true;
+            this.lblNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProduto.Location = new System.Drawing.Point(16, 18);
+            this.lblNomeProduto.Name = "lblNomeProduto";
+            this.lblNomeProduto.Size = new System.Drawing.Size(130, 16);
+            this.lblNomeProduto.TabIndex = 0;
+            this.lblNomeProduto.Text = "Nome Do Produto";
             // 
             // FrmGestaoProdutos
             // 

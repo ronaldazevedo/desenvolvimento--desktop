@@ -33,3 +33,11 @@ CREATE TABLE IF NOT EXISTS usuario (
     data_ultimo_acesso Datetime,
     status ENUM('inativo', 'ativo') NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS Usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(10) NOT NULL,
+    STATUS ENUM("inativo", "ativo") NOT NULL
+    );
