@@ -25,7 +25,7 @@ namespace MultApps.Windows
         {
             var categoria = new Categoria();
             categoria.Nome = txtNome.Text;
-            categoria.Status = (StatusEnum)cmbStatus.SelectedIndex;
+            categoria.Status = Convert.ToBoolean(cmbStatus.SelectedIndex);
             
             var categoriaRepository = new CategoriaRepository();
 
@@ -166,7 +166,7 @@ namespace MultApps.Windows
             // Preencha os campos de edição com os dados obtidos
             txtId.Text = categoria.Id.ToString();
             txtNome.Text = categoria.Nome;
-            cmbStatus.SelectedIndex = (int)categoria.Status;
+            cmbStatus.SelectedIndex = Convert.ToInt16(categoria.Status);
             txtDataCadastro.Text = categoria.DataCriacao.ToString("dd/MM/yyyy HH:mm");
             txtDataAlteracao.Text = categoria.DataAlteracao.ToString("dd/MM/yyyy HH:mm");
 

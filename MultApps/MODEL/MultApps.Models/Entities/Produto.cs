@@ -3,11 +3,13 @@ using MultApps.Models.Entities.Abstract;
 
 namespace MultApps.Models.Entities
 {
-    internal class Produto : EntidadeBase
+    public class Produto : EntidadeBase
     {
-        public int CategoriaId { get; set; }
         public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public int CategoriaId { get; set; }
         public decimal Preco { get; set; }
-        public int QuantidadeEmEstoque { get; set; }
+        public int Estoque { get; set; }
+        public string UrlImagem { get; set; }
     }
 }

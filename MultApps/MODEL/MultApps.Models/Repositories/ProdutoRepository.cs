@@ -1,16 +1,14 @@
-﻿using Dapper;
-using MultApps.Models.Entities;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Dapper;
+using MultApps.Models.Entities;
+using MySql.Data.MySqlClient;
 
 namespace MultApps.Models
 {
-    internal class ProdutoRepository
+    public  class ProdutoRepository
     {
         private string ConnectionString = "Server=localhost;Database=multapps_dev;Uid=root;Pwd=root";
 
@@ -30,7 +28,7 @@ namespace MultApps.Models
             }
         }
 
-        public void Adicionar(Produto produto)
+        public void CadastrarProduto(Produto produto)
         {
             using (IDbConnection db = new MySqlConnection(ConnectionString))
             {
@@ -59,6 +57,11 @@ namespace MultApps.Models
             {
                 db.Execute("DELETE FROM produto WHERE id = @Id", new { Id = id });
             }
+        }
+
+        public bool AtualizarProduto(Produto produto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

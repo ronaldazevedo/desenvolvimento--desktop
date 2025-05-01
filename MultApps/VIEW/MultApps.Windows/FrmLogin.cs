@@ -47,7 +47,7 @@ namespace MultApps.Windows
                 return;
             }
 
-            if (usuario.Status == StatusEnum.Inativo)
+            if (usuario.Status == false)
             {
                 MessageBox.Show("O usuário está inativo");
                 txtUsuario.Focus();

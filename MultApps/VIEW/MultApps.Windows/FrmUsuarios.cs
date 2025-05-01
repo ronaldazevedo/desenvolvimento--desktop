@@ -47,7 +47,7 @@ namespace MultApps.Windows
                 usuario.Cpf = mtbCpf.Text;
                 usuario.Email = txtEmail.Text;
                 usuario.Senha = CriptografiaService.Criptografar(txtSenha.Text);
-                usuario.Status = (StatusEnum)cmbStatus.SelectedIndex;
+                usuario.Status = Convert.ToBoolean(cmbStatus.SelectedIndex);
 
                 //2 Passo criar o objeto de repositório.
                 var usuarioRepository = new UsuarioRepository();
@@ -203,7 +203,7 @@ namespace MultApps.Windows
             txtSenha.Text = usuario.Senha;
             txtDataCadastro.Text = usuario.DataCriacao.ToString("dd/MM/yyyy HH:mm");
             txtUltimoAcesso.Text = usuario.DataUltimoAcesso.ToString("dd/MM/yyyy HH:mm");
-            cmbStatus.SelectedIndex = (int)usuario.Status;
+            cmbStatus.SelectedIndex = Convert.ToInt16(usuario.Status);
 
             btnSalvar.Text = "Salvar alterações";
         }

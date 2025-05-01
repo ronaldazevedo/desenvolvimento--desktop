@@ -34,7 +34,7 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnNovoProduto = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             this.lblCategorias = new System.Windows.Forms.Label();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblNomeProduto = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +121,7 @@
             this.btnNovoProduto.TabIndex = 4;
             this.btnNovoProduto.Text = "+ NOVO PRODUTO";
             this.btnNovoProduto.UseVisualStyleBackColor = false;
+            this.btnNovoProduto.Click += new System.EventHandler(this.btnNovoProduto_Click);
             // 
             // btnAtualizar
             // 
@@ -133,10 +134,10 @@
             this.btnAtualizar.Text = "<> ATUALIZAR GRIP";
             this.btnAtualizar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvProdutos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.ID,
             this.Nome,
@@ -144,10 +145,11 @@
             this.Preço,
             this.Estoque,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 97);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 56);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvProdutos.Location = new System.Drawing.Point(22, 97);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.Size = new System.Drawing.Size(746, 56);
+            this.dgvProdutos.TabIndex = 6;
+            this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
             // 
             // Column1
             // 
@@ -206,9 +208,9 @@
             this.panel1.Controls.Add(this.txtNomeProduto);
             this.panel1.Controls.Add(this.lblNomeProduto);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(22, 183);
+            this.panel1.Location = new System.Drawing.Point(22, 186);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(762, 359);
+            this.panel1.Size = new System.Drawing.Size(762, 356);
             this.panel1.TabIndex = 7;
             // 
             // btnExcluir
@@ -221,6 +223,7 @@
             this.btnExcluir.TabIndex = 18;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
@@ -243,7 +246,6 @@
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // rbInativo
             // 
@@ -392,7 +394,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(809, 577);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnNovoProduto);
             this.Controls.Add(this.lblCategoria);
@@ -400,7 +402,7 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cbmStatusFiltro);
             this.Name = "FrmGestaoProdutos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -416,7 +418,7 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Button btnNovoProduto;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
