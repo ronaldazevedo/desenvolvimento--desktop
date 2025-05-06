@@ -5,9 +5,15 @@ namespace MultApps.Models.Entities
 {
     internal class Produto : EntidadeBase
     {
-        public int CategoriaId { get; set; }
-        public string Nome { get; set; }
-        public decimal Preco { get; set; }
-        public int QuantidadeEmEstoque { get; set; }
+        
+        
+            public int ID { get; set; }
+            public string Nome { get; set; }
+            public string Categoria { get; set; }
+            public decimal Preco { get; set; }
+            public int Estoque { get; set; }
+            public string Status { get; set; } 
+        
+
     }
 }
